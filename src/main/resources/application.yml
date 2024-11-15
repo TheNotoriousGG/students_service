@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: students_service
+  datasource:
+    driver-class-name: ${DB_DRIVER:org.postgresql.Driver}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+    url: ${DB_CONNECTION_STRING:jdbc:postgresql://localhost:5432/postgres}
+  jpa:
+    database-platform: ${JPA_DB_DIALECT:org.hibernate.dialect.PostgreSQLDialect}
+    generate-ddl: false
+    properties:
+      hibernate:
+        show_sql: ${DB_SHOW_SQL:false}
+    hibernate:
+      ddl-auto: validate
+
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.yml

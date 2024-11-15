@@ -67,6 +67,10 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<artifactId>liquibase-core</artifactId>
+			<groupId>org.liquibase</groupId>
+		</dependency>
 	</dependencies>
 
 	<build>
